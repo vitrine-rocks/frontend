@@ -1,6 +1,8 @@
 # frontend
 # vitrine.rocks
 
+![](https://github.com/vitrine-rocks/frontend/workflows/Deploy/badge.svg)
+
 ## Build Setup
 
 ```bash
