@@ -11,19 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_email: ${{secrets.HEROKU_EMAIL}}
-
       - name: Deploy to staging
         if: github.ref == 'refs/heads/qa'
         uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
         with:
           heroku_app_name: ${{secrets.HEROKU_STG_APP_NAME}}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
 
       - name: Deploy to production
         if: github.ref == 'refs/heads/master'
         uses: akhileshns/heroku-deploy@v3.4.6 # This is the action
         with:
           heroku_app_name: ${{secrets.HEROKU_PRD_APP_NAME}}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_email: ${{secrets.HEROKU_EMAIL}}
