@@ -26,3 +26,23 @@ jobs:
           heroku_app_name: ${{secrets.HEROKU_PRD_APP_NAME}}
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
+
+      - name: Notify slack success
+        if: success()
+        env:
+          SLACK_BOT_TOKEN: ${{secrets.SLACK_BOT_TOKEN}}
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel: ${{SLACK_CHANNEL}}
+          status: SUCCESS
+          color: good
+
+      - name: Notify slack fail
+        if: failure()
+        env:
+          SLACK_BOT_TOKEN: ${{secrets.SLACK_BOT_TOKEN}}
+        uses: voxmedia/github-action-slack-notify-build@v1
+        with:
+          channel: ${{SLACK_CHANNEL}}
+          status: FAILED
+          color: danger
