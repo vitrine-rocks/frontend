@@ -21,3 +21,11 @@ $ yarn generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+
+## Styleguide
+https://github.com/basarat/typescript-book/blob/master/docs/styleguide/styleguide.md
+
+
+## Node version
+v12.18.3
