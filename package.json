@@ -2,6 +2,10 @@
   "name": "vitrine.rocks",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": "12.x",
+    "yarn": "1.x"
+  },
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -12,15 +16,15 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^1.0.0",
+    "@nuxtjs/vuetify": "^1.11.2",
+    "@nuxt/types": "^2.14.0",
+    "@nuxt/typescript-build": "^2.0.2",
     "nuxt": "^2.14.0"
   },
   "devDependencies": {
-    "@nuxt/types": "^2.14.0",
-    "@nuxt/typescript-build": "^2.0.2",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
-    "@nuxtjs/vuetify": "^1.11.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.5.0",
     "eslint-plugin-nuxt": "^1.0.0"
