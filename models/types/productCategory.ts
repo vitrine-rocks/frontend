@@ -13,10 +13,10 @@ export class ProductCategory implements IProductCategory {
 
   constructor();
   constructor(obj: IProductCategory)
-  constructor(obj?: any){
-    this.id = obj && obj.id || null;
-    this.name = obj && obj.name || null;
-    this.exhibitionOrder = obj && obj.exhibitionOrder || null;
-    this.slug = obj && obj.slug || null;
+  constructor(obj?: IProductCategory){
+    this.id = obj && obj.id || '';
+    this.name = obj && obj.name || '';
+    this.exhibitionOrder = obj && obj.exhibitionOrder || 0;
+    this.slug = obj && obj.slug || '';
   }
 }
