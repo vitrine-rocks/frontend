@@ -1,20 +1,17 @@
 <template>
   <v-container>
     <v-card outlined>
-      <v-row
-        v-for="productCategory in productCategories"
-        :key="productCategory.id"
-        justify="center" class="mt-2"
-      >
-      {{ productCategory.name }}
-      </v-row>
-      <v-row class="mt-2">
-        <v-text-field
-          v-model="productCategory.name"
-          name="name"
-          label="Categoria do produto"
-          required
-        />
+      <v-row>
+        <ul>
+          <li v-for="productCategory in productCategories" :key="productCategory.id">
+            {{ productCategory.name }}
+            <ul>
+              <li v-for="child in productCategory.productCategories" :key="child.id">
+                {{ child.name }}
+              </li>
+            </ul>
+          </li>
+        </ul>
         <v-btn
           @click="add"
           fab

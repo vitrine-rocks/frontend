@@ -3,13 +3,15 @@ interface IProductCategory {
   name: string;
   exhibitionOrder: number;
   slug: string;
+  productCategories?: IProductCategory[];
 }
 
 export class ProductCategory implements IProductCategory {
   id: string;
   name: string;
   exhibitionOrder: number;
-  slug: string
+  slug: string;
+  productCategories?: IProductCategory[];
 
   constructor();
   constructor(obj: IProductCategory)

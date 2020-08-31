@@ -14,7 +14,8 @@ export default Vue.extend({
 
   created() {
     const service: ProductCategoryService = new ProductCategoryService();
-    this.productCategories = service.listAll();
+    this.productCategories = service.list();
+    
   },
 
   methods: {
