@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container fluid>
     <v-card outlined>
       <v-row>
         <ul>
@@ -12,17 +12,6 @@
             </ul>
           </li>
         </ul>
-        <v-btn
-          @click="add"
-          fab
-          color="primary"
-          big
-          bottom
-          right
-          fixed
-        >
-          <v-icon>mdi-plus</v-icon>
-        </v-btn>
       </v-row>
     </v-card>
   </v-container>
