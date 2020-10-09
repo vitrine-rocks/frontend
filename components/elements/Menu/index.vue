@@ -1,40 +1,43 @@
 <template>
   <v-menu offset-y :close-on-content-click="false">
-    <template v-slot:activator="{ on: menuOpened }">
-      <v-app-bar-nav-icon @click="toggleMenu" v-on="menuOpened" />
+    <template v-slot:activator="{ on }">
+      <v-app-bar-nav-icon v-on="on" />
     </template>
-    <v-list>
+    <v-list v-if="categories">
       <div 
-        v-for="item in items"
-        :key="item.title"
+        v-for="category in categories"
+        :key="category.id"
       >
         <v-list-group
-          v-if="item.children.length"
-          v-model="item.active"
+          v-if="category.product_categories.length"
           no-action
         >
           <template v-slot:activator>
-            <v-list-tile>
-              <v-list-tile-content>
-                <v-list-tile-title>{{ item.title }}</v-list-tile-title>
-              </v-list-tile-content>
-            </v-list-tile>
-          </template>
-
-          <v-list-tile
-            v-for="subItem in item.children"
-            :key="subItem.title"
-          >
             <v-list-item>
-              <v-list-tile-title class="pl-4">{{ subItem.title }}</v-list-tile-title>
+              <v-list-item-content>
+                <v-list-item-title>{{ category.description }}</v-list-item-title>
+              </v-list-item-content>
             </v-list-item>
-          </v-list-tile>
+          </template>
+          <nuxt-link
+            v-for="subcategory in category.product_categories"
+            :key="subcategory.id"
+            :to="subcategory.slug"
+          >
+            <v-list-item class="pl-12">
+              <v-list-item-title>{{ subcategory.description }}</v-list-item-title>
+            </v-list-item>
+          </nuxt-link>
+          
         </v-list-group>
         <v-list-item v-else>
-          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+          <v-list-item-title>{{ category.description }}</v-list-item-title>
         </v-list-item>
       </div>
     </v-list>
+    <div v-else class="white pa-2">
+      <p class="mb-0">Carregando...</p>
+    </div>
   </v-menu>
 </template>
 

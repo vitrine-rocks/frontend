@@ -9,12 +9,12 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { Component, Vue } from 'nuxt-property-decorator'
 import Header from '~/components/shared/Header'
 
-export default Vue.extend({
-  components: {
-    Header
-  }
+
+@Component({
+  components: { Header },
 })
+export default class Default extends Vue {}
 </script>

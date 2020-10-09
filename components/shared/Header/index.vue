@@ -18,12 +18,7 @@
     </nuxt-link>
 
     <v-spacer></v-spacer>
-    
-    <p>{{ menuOpened }}</p>
 
-    <nuxt-link to="/" alt="Nordserv logo">
-      {{ menuOpened }}
-    </nuxt-link>
     <nuxt-link to="/" alt="Nordserv logo">
       Link 2
     </nuxt-link>
