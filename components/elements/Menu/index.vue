@@ -1,5 +1,5 @@
 <template>
-  <v-menu offset-y :close-on-content-click="false">
+  <v-menu offset-y :close-on-content-click="true">
     <template v-slot:activator="{ on }">
       <v-app-bar-nav-icon v-on="on" />
     </template>
@@ -11,6 +11,7 @@
         <v-list-group
           v-if="category.product_categories.length"
           no-action
+          @click.stop.prevent
         >
           <template v-slot:activator>
             <v-list-item>
