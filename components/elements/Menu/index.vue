@@ -3,11 +3,12 @@
     <template v-slot:activator="{ on }">
       <v-app-bar-nav-icon v-on="on" />
     </template>
-    <v-list v-if="categories">
+    <v-list v-if="categories.length">
       <div 
         v-for="category in categories"
         :key="category.id"
       >
+        <!-- Category has children -->
         <v-list-group
           v-if="category.product_categories.length"
           no-action
@@ -28,8 +29,7 @@
             <v-list-item class="pl-12">
               <v-list-item-title>{{ subcategory.description }}</v-list-item-title>
             </v-list-item>
-          </nuxt-link>
-          
+          </nuxt-link>       
         </v-list-group>
         <v-list-item v-else>
           <v-list-item-title>{{ category.description }}</v-list-item-title>
