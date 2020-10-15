@@ -1,27 +1,22 @@
 import { Component, Provide, Watch, Vue } from 'nuxt-property-decorator'
 // import { getters, RootState } from '~/store'
-import MenuIsLink from '~/components/elements/MenuIsLink'
 import Category from '~/components/elements/MenuCategory'
 
 @Component({
-  components: { MenuIsLink, Category }
+  components: { Category }
 })
 export default class Menu extends Vue {
+  // Data (for future reference)
   @Provide() loading = true 
   @Provide() items = [] 
 
-  // Computed
+  // Computed (for future reference)
   get categories() {
 	  // return (this.$store.state as RootState).things
 	  return this.$accessor.app.categories || []
   }
 
-  mounted() {
-    // const name = this.$store.getters['name'] as ReturnType<typeof getters.name>
-    // console.log('created')
-    // this.$accessor.app.getCategories()
-  }
-
+  // Watch (for future reference)
   @Watch('categories')
   onCategoriesChanged(val: string, oldVal: string) {
     console.log('onCategoriesChanged')
@@ -31,16 +26,7 @@ export default class Menu extends Vue {
     this.$accessor.app.getCategories()
   }
 
-  fetch() {
-    // console.log('fetch  ')
-    // this.$accessor.app.getCategories()
-  }
-
-  getChildren(categories) {
-    // if ()
-    return MenuIsLink
-  }
-
+  // Method (for future reference)
   toggleMenu() {
     // this.$accessor.app.toggleMenu();
   }
