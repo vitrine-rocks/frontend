@@ -1,36 +1,19 @@
 import { Component, Provide, Watch, Vue } from 'nuxt-property-decorator'
 // import { getters, RootState } from '~/store'
+import MenuIsLink from '~/components/elements/MenuIsLink'
+import Category from '~/components/elements/MenuCategory'
 
-@Component
+@Component({
+  components: { MenuIsLink, Category }
+})
 export default class Menu extends Vue {
   @Provide() loading = true 
   @Provide() items = [] 
-	// @Provide() items = [
-  //   { 
-  //     title: 'Áreas classificadas',
-  //     children: [
-  //       { title: 'Botoeiras 1' },
-  //       { title: 'Botoeiras 2' },
-  //     ]
-  //   },
-  //   { 
-  //     title: 'Linha de transmissão',
-  //     children: [
-  //       { title: 'Amortecedores' }
-  //     ] 
-  //   },
-  //   { title: 'Rede de distribuição', children: [] }
-  // ]
 
-  // $accessor;
-  // get menuOpened() {
-	//   // return (this.$store.state as RootState).things
-	//   return this.$accessor.app.menuOpened
-  // }
-
+  // Computed
   get categories() {
 	  // return (this.$store.state as RootState).things
-	  return this.$accessor.app.categories
+	  return this.$accessor.app.categories || []
   }
 
   mounted() {
@@ -51,6 +34,11 @@ export default class Menu extends Vue {
   fetch() {
     // console.log('fetch  ')
     // this.$accessor.app.getCategories()
+  }
+
+  getChildren(categories) {
+    // if ()
+    return MenuIsLink
   }
 
   toggleMenu() {

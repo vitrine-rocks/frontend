@@ -1,0 +1,185 @@
+<template>
+  <v-list v-if="product_categories.length" :style="{ marginLeft: `${index}px` }">
+    <!-- {{index}} -->
+    <v-list-group
+      no-action
+      @click.stop.prevent
+      v-for="product_category in product_categories"
+      :key="product_category.id"
+    >
+    <!-- product_category.product_categories {{product_category.product_categories}} -->
+    <!-- product_category.product_categories.length {{product_category.product_categories.length}} -->
+    <!-- {{ product_category.description }} -->
+    <div v-if="product_category.product_categories.length > 0">
+      <!-- Has child -->
+        <!-- <category v-for="child in product_category.product_categories" v-bind:product_categories="child" :key="child.id" /> -->
+        <category 
+          :product_categories="product_category.product_categories"
+          :index="index + 10"
+        />
+        <!-- <category v-for="child in product_category.product_categories" v-bind:product_categories="child" :key="product_category.id" /> -->
+    </div>
+    <template v-slot:activator>
+      <v-list-item-content>
+        <v-list-item-title v-text="product_category.description"></v-list-item-title>
+      </v-list-item-content>
+    </template>
+    <!-- <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+      </v-list-item-content>
+    </v-list-item> -->
+    <!-- <category v-for="child in product_category.product_categories" v-bind:category="child" :key="product_category.id" /> -->
+    <!-- <template v-slot:activator>
+      <div v-if="product_category.product_categories.length > 0">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </div>
+      <div v-else>
+        
+          <nuxt-link :to="product_category.slug">
+            <p>{{ product_category.description }}</p>
+          </nuxt-link>
+        
+      </div>
+    </template> -->
+    <!-- <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>product_category.product_categories.length {{ product_category.product_categories.length }}</v-list-item-title>
+            <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item> -->
+    <!-- <div v-if="product_category.product_categories.length === 0">
+      <nuxt-link
+        v-for="subcategory in product_category.product_categories"
+        :key="subcategory.id"
+        :to="subcategory.slug"
+      >
+        <v-list-item class="pl-12">
+          <v-list-item-title>{{ subcategory.description }}</v-list-item-title>
+        </v-list-item>
+      </nuxt-link>
+    </div>
+    <template v-slot:activator @click.stop.prevent>
+      <v-list-item @click.stop.prevent>
+        <v-list-item-content @click.stop.prevent>
+          <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </template> -->
+    
+    </v-list-group>
+  </v-list>
+  
+  <!-- <ul class="categories">
+    <li class="category">
+      <ul class="sub-categories" v-if="product_category.product_categories && product_category.product_categories.length > 0">
+        <p>Has data</p>
+        {{ product_category.id }}
+        <category v-for="child in product_category.product_categories" v-bind:category="child" :key="product_category.id" />
+      </ul>
+      <div class="category-empty" v-else v-show="!product_category.leaf && product_category.expanded">No Data</div>
+    </li>
+  </ul> -->
+</template>
+
+<script>
+export default {
+  name: 'category',
+  props: {
+    product_categories: {
+      required: true
+    },
+    index: {
+      required: true
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>
+
+<template>
+  <v-list-group
+    no-action
+    @click.stop.prevent
+  >
+    <!-- {{ product_category.description }} -->
+    <div v-if="product_category.product_categories.length > 0">
+      Has child
+      <category v-for="child in product_category.product_categories" v-bind:product_category="child" :key="product_category.id" />
+    </div>
+    <!-- <category v-for="child in product_category.product_categories" v-bind:category="child" :key="product_category.id" /> -->
+    <!-- <template v-slot:activator>
+      <div v-if="product_category.product_categories.length > 0">
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </div>
+      <div v-else>
+        
+          <nuxt-link :to="product_category.slug">
+            <p>{{ product_category.description }}</p>
+          </nuxt-link>
+        
+      </div>
+    </template> -->
+    <v-list-item>
+          <v-list-item-content>
+            <!-- <v-list-item-title>product_category.product_categories.length {{ product_category.product_categories.length }}</v-list-item-title> -->
+            <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+    <!-- <div v-if="product_category.product_categories.length === 0">
+      <nuxt-link
+        v-for="subcategory in product_category.product_categories"
+        :key="subcategory.id"
+        :to="subcategory.slug"
+      >
+        <v-list-item class="pl-12">
+          <v-list-item-title>{{ subcategory.description }}</v-list-item-title>
+        </v-list-item>
+      </nuxt-link>
+    </div>
+    <template v-slot:activator @click.stop.prevent>
+      <v-list-item @click.stop.prevent>
+        <v-list-item-content @click.stop.prevent>
+          <v-list-item-title>{{ product_category.description }}</v-list-item-title>
+        </v-list-item-content>
+      </v-list-item>
+    </template> -->
+    
+  </v-list-group>
+  <!-- <ul class="categories">
+    <li class="category">
+      <ul class="sub-categories" v-if="product_category.product_categories && product_category.product_categories.length > 0">
+        <p>Has data</p>
+        {{ product_category.id }}
+        <category v-for="child in product_category.product_categories" v-bind:category="child" :key="product_category.id" />
+      </ul>
+      <div class="category-empty" v-else v-show="!product_category.leaf && product_category.expanded">No Data</div>
+    </li>
+  </ul> -->
+</template>
+
+<script>
+export default {
+  name: 'category',
+  props: {
+    product_category: {
+      required: true
+    }
+  }
+}
+</script>
+
+<style>
+
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <v-menu offset-y :close-on-content-click="true">
+  <!-- <v-menu offset-y :close-on-content-click="true">
     <template v-slot:activator="{ on }">
       <v-app-bar-nav-icon v-on="on" />
     </template>
@@ -8,7 +8,9 @@
         v-for="category in categories"
         :key="category.id"
       >
-        <!-- Category has children -->
+        <component v-bind:is="getChildren(categories)" v-bind="{ categories }"></component>
+        <component v-bind:is="MenuIsLink" v-bind:category="{ categories }"></component>
+        <MenuIsLink v-bind:categories="{ categories }" />
         <v-list-group
           v-if="category.product_categories.length"
           no-action
@@ -39,6 +41,34 @@
     <div v-else class="white pa-2">
       <p class="mb-0">Carregando...</p>
     </div>
+  </v-menu> -->
+  <!-- <v-menu offset-y :close-on-content-click="true"> -->
+  <v-menu offset-y :close-on-content-click="false">
+    <template v-slot:activator="{ on }">
+      <v-app-bar-nav-icon v-on="on" />
+    </template>
+    <div v-if="categories.length">
+      <category
+        :product_categories="categories"
+        :index="0"
+      />
+    </div>
+    
+    <!-- <v-list v-if="categories.length">
+      <div 
+        v-for="category in categories"
+        :key="category.id"
+      >
+        <MenuIsLink :category="category" />
+        
+        <v-list-item v-else>
+          <v-list-item-title>{{ category.description }}</v-list-item-title>
+        </v-list-item>
+      </div>
+    </v-list>
+    <div v-else class="white pa-2">
+      <p class="mb-0">Carregando...</p>
+    </div> -->
   </v-menu>
 </template>
 
