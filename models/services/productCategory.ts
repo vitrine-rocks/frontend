@@ -3,7 +3,7 @@ import Vue from 'vue';
 
 export class ProductCategoryService extends Vue {
 
-  list():ProductCategory[] {
+  list(): ProductCategory[] {
     const productCategory1: ProductCategory = {
       id: "1",
       name: 'Áreas classificadas',

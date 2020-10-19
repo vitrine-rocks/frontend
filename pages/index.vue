@@ -1,6 +1,6 @@
 <template>
   <v-container fluid>
-    <v-card outlined>
+    <!-- <v-card outlined>
       <v-row>
         <ul>
           <li v-for="productCategory in productCategories" :key="productCategory.id">
@@ -11,9 +11,11 @@
               </li>
             </ul>
           </li>
+          <li>Test</li>
         </ul>
       </v-row>
-    </v-card>
+    </v-card> -->
+    <p>Aqui aparecerá os produtos em destaque</p>
   </v-container>
 </template>
 
