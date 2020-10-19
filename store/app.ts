@@ -23,11 +23,9 @@ export const actions = actionTree(
   { state, getters, mutations },
   {
     async getCategories({ commit }) {
-      console.log('env: ', process.env.NODE_ENV)
-      console.log('categories: ', mockCategories)
-      const developmentEnv = process.env.NODE_ENV
+      const developmentEnv = process.env.ENVIRONMENT
       let categories
-      if (developmentEnv === 'development') {
+      if (developmentEnv === 'mockdata') {
         categories = mockCategories
       } else {
         categories = await this.$axios.$get('https://nordserv-vitrine-backend-stg.herokuapp.com/portal/product_categories')

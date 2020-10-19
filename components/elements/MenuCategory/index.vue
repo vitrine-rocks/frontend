@@ -46,9 +46,9 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 })
 export default class category extends Vue {
   @Prop()
-  product_categories: object
+  product_categories!: object
   @Prop()
-  index: number
+  index!: number
 }
 </script>
 

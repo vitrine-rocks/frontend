@@ -1,20 +1,21 @@
 <template>
   <v-container fluid>
-    <v-card outlined>
+    <!-- <v-card outlined>
       <v-row>
         <ul>
-          <!-- <li v-for="productCategory in productCategories" :key="productCategory.id">
+          <li v-for="productCategory in productCategories" :key="productCategory.id">
             {{ productCategory.name }}
             <ul>
               <li v-for="child in productCategory.productCategories" :key="child.id">
                 {{ child.name }}
               </li>
             </ul>
-          </li> -->
+          </li>
           <li>Test</li>
         </ul>
       </v-row>
-    </v-card>
+    </v-card> -->
+    <p>Lista de produtos</p>
   </v-container>
 </template>
 

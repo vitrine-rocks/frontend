@@ -4,6 +4,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
+    "strictPropertyInitialization": false,
     "lib": [
       "ESNext",
       "ESNext.AsyncIterable",
@@ -34,5 +35,8 @@
     "node_modules",
     ".nuxt",
     "dist"
+  ],
+  "files": [
+    "./models/vue-shims.d.ts"
   ]
 }

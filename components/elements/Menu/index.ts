@@ -7,8 +7,7 @@ import Category from '~/components/elements/MenuCategory'
 })
 export default class Menu extends Vue {
   // Data (for future reference)
-  @Provide() loading = true 
-  @Provide() items = [] 
+  @Provide() menuOpened = false 
 
   // Computed (for future reference)
   get categories() {
@@ -19,11 +18,15 @@ export default class Menu extends Vue {
   // Watch (for future reference)
   @Watch('categories')
   onCategoriesChanged(val: string, oldVal: string) {
-    console.log('onCategoriesChanged')
+    // console.log('onCategoriesChanged')
   }
 
   created() {
     this.$accessor.app.getCategories()
+  }
+
+  mounted() {
+    // on.click()
   }
 
   // Method (for future reference)

@@ -84,5 +84,8 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  env: {
+    ENVIRONMENT: process.env.NODE_ENV || 'development'
   }
 }
