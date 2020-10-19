@@ -15,7 +15,7 @@
         </ul>
       </v-row>
     </v-card> -->
-    <p>Lista de produtos</p>
+    <p>Aqui aparecerá os produtos em destaque</p>
   </v-container>
 </template>
 

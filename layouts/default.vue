@@ -17,3 +17,14 @@ import Header from '~/components/shared/Header'
 })
 export default class Default extends Vue {}
 </script>
+
+<style scoped>
+  .theme--dark #main-app-bar, .theme--light #main-app-bar {
+    border-width: 0 0 thin;
+    border-style: solid;
+  }
+
+  .theme--dark #main-app-bar.theme--light, .theme--light #main-app-bar.theme--light {
+    border-bottom-color: #0000001f !important;
+  }
+</style>
