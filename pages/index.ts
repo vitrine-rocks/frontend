@@ -1,27 +1,36 @@
-import Vue, { PropOptions } from 'vue';
-import { ProductCategoryService } from "~/models/services/productCategory";
-import { ProductCategory } from "~/models/types/productCategory";
+// import Vue, { PropOptions } from 'vue';
+import { Component, Provide, Vue } from 'nuxt-property-decorator'
+import { ProductCategoryService } from '~/models/services/productCategory'
+import { ProductCategory } from '~/models/types/productCategory'
+import Highlights from '~/components/partials/Highlights'
 
-export default Vue.extend({
-  name: 'Index',
+// export default Vue.extend({
+//   name: 'Index',
 
-  data() {
-    return {
-      productCategories: [] = [] as ProductCategory[],
-      productCategory: new ProductCategory()
-    }
-  },
+//   data() {
+//     return {
+//       productCategories: [] = [] as ProductCategory[],
+//       productCategory: new ProductCategory()
+//     }
+//   },
 
-  created() {
-    const service: ProductCategoryService = new ProductCategoryService();
-    this.productCategories = service.list();
+//   created() {
+//     const service: ProductCategoryService = new ProductCategoryService();
+//     this.productCategories = service.list();
     
-  },
+//   },
 
-  methods: {
-    add() {
-      this.productCategories.push(this.productCategory);
-      this.productCategory = new ProductCategory();
-    }
-  }
+//   methods: {
+//     add() {
+//       this.productCategories.push(this.productCategory);
+//       this.productCategory = new ProductCategory();
+//     }
+//   }
+// })
+
+@Component({
+  components: { Highlights }
 })
+export default class Index extends Vue {
+
+}

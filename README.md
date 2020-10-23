@@ -9,7 +9,10 @@
 # install dependencies
 $ yarn install
 
-# serve with hot reload at localhost:3000
+# serve mockdata with hot reload at localhost:3000
+$ yarn mock
+
+# serve api data with hot reload at localhost:3000
 $ yarn dev
 
 # build for production and launch server
