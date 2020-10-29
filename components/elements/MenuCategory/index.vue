@@ -16,7 +16,7 @@
       >
         <Category
           :product_categories="product_category.product_categories"
-          :index="index ? index + 10 : 0"
+          :index="index + 10"
         />
         <template v-slot:activator>
           <v-list-item-content>
