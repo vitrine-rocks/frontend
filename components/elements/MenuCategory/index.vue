@@ -14,7 +14,7 @@
       >
         product_category.product_categories: {{ product_category.product_categories }}
         product_category.product_categories.length: {{ product_category.product_categories.length }}
-        17:02
+        17:14
         <!-- <category
           :product_categories="product_category.product_categories"
           :index="index + 10"
@@ -51,7 +51,7 @@ import { Component, Prop, Vue } from 'nuxt-property-decorator'
 })
 export default class Category extends Vue {
   @Prop()
-  product_categories!: any
+  product_categories: any
   @Prop()
   index!: number
 }
