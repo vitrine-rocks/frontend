@@ -1,6 +1,8 @@
 <template>
-  <v-list class="category">
-    product_categories: {{ product_categories }}
+  <v-list
+    v-if="product_categories.length"
+    class="category"
+  >
     <div
       v-for="product_category in product_categories"
       :key="product_category.id"
@@ -12,16 +14,9 @@
         @click.stop.prevent
         v-if="product_category.product_categories.length > 0"
       >
-        product_category.product_categories: {{ product_category.product_categories }}
-        product_category.product_categories.length: {{ product_category.product_categories.length }}
-        17:35
-        <!-- <category
-          :product_categories="product_category.product_categories"
-          :index="index + 10"
-        /> -->
         <Category
-          :product_categories="[{'id': 'cdbcff07-25ef-4e6b-871e-0071c9ac64df','description': 'Botoeiras','slug': 'botoeiras','product_categories': []},{'id': '712b89eb-a5f1-4249-bc27-b55faf6c2093','description': 'Caixas de passagem','slug': 'caixas-de-passagem','product_categories': []}]"
-          :index="15"
+          :product_categories="product_category.product_categories"
+          :index="index ? index + 10 : 0"
         />
         <template v-slot:activator>
           <v-list-item-content>
@@ -46,10 +41,10 @@
 <script lang="ts">
 
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
-const components: any = {} // https://github.com/nuxt/nuxt.js/issues/6385
 @Component({
-  // components: { Category }
-  components: { Category: () => import('./index.vue') }
+  // ? https://github.com/nuxt/nuxt.js/issues/6385
+  // ? https://stackoverflow.com/questions/49154490/did-you-register-the-component-correctly-for-recursive-components-make-sure-to
+  components: { Category: () => import('./index.vue') }  
 })
 export default class Category extends Vue {
   @Prop()
@@ -57,7 +52,6 @@ export default class Category extends Vue {
   @Prop()
   index!: number
 }
-components.Category = Category
 </script>
 
 <style scoped>
