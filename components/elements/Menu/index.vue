@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon v-on="on" />
     </template>
     <div v-if="categories.length && menuOpened">
-      <category
+      <Category
         :product_categories="categories"
         :index="0"
       />
