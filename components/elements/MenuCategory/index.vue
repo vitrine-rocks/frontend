@@ -14,20 +14,20 @@
       >
         product_category.product_categories: {{ product_category.product_categories }}
         product_category.product_categories.length: {{ product_category.product_categories.length }}
-        16:43
+        16:56
         <!-- <category
           :product_categories="product_category.product_categories"
           :index="index + 10"
         /> -->
-        <category
+        <Category
           :product_categories="[{'id': 'cdbcff07-25ef-4e6b-871e-0071c9ac64df','description': 'Botoeiras','slug': 'botoeiras','product_categories': []},{'id': '712b89eb-a5f1-4249-bc27-b55faf6c2093','description': 'Caixas de passagem','slug': 'caixas-de-passagem','product_categories': []}]"
           :index="15"
         />
-        <!-- <template v-slot:activator>
+        <template v-slot:activator>
           <v-list-item-content>
             <v-list-item-title v-text="product_category.description"></v-list-item-title>
           </v-list-item-content>
-        </template> -->
+        </template>
       </v-list-group> 
       <!-- If category has no children, load a link to product page -->
       <nuxt-link
@@ -47,9 +47,9 @@
 
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
 @Component({
-  components: { category }
+  components: { Category }
 })
-export default class category extends Vue {
+export default class Category extends Vue {
   @Prop()
   product_categories!: object
   @Prop()
