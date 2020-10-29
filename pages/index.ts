@@ -1,7 +1,8 @@
 // import Vue, { PropOptions } from 'vue';
 import { Component, Provide, Vue } from 'nuxt-property-decorator'
-import { ProductCategoryService } from "~/models/services/productCategory";
-import { ProductCategory } from "~/models/types/productCategory";
+import { ProductCategoryService } from '~/models/services/productCategory'
+import { ProductCategory } from '~/models/types/productCategory'
+import Highlights from '~/components/partials/Highlights'
 
 // export default Vue.extend({
 //   name: 'Index',
@@ -27,7 +28,9 @@ import { ProductCategory } from "~/models/types/productCategory";
 //   }
 // })
 
-@Component
+@Component({
+  components: { Highlights }
+})
 export default class Index extends Vue {
 
 }
