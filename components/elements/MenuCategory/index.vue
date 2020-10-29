@@ -46,6 +46,7 @@
 <script lang="ts">
 
 import { Component, Prop, Vue } from 'nuxt-property-decorator'
+const components: any = {}
 @Component({
   components: { Category }
 })
@@ -55,6 +56,7 @@ export default class Category extends Vue {
   @Prop()
   index!: number
 }
+components.Category = Category
 </script>
 
 <style scoped>
