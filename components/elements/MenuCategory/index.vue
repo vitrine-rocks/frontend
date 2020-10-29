@@ -2,7 +2,7 @@
   <v-list class="category">
     product_categories: {{ product_categories }}
     <div
-      v-for="(product_category, index) in product_categories"
+      v-for="product_category in product_categories"
       :key="product_category.id"
       :style="{ paddingLeft: `${index ? '10px' : ''}` }"
     >
@@ -14,7 +14,7 @@
       >
         product_category.product_categories: {{ product_category.product_categories }}
         product_category.product_categories.length: {{ product_category.product_categories.length }}
-        15:56
+        16:43
         <!-- <category
           :product_categories="product_category.product_categories"
           :index="index + 10"
@@ -23,11 +23,11 @@
           :product_categories="[{'id': 'cdbcff07-25ef-4e6b-871e-0071c9ac64df','description': 'Botoeiras','slug': 'botoeiras','product_categories': []},{'id': '712b89eb-a5f1-4249-bc27-b55faf6c2093','description': 'Caixas de passagem','slug': 'caixas-de-passagem','product_categories': []}]"
           :index="15"
         />
-        <template v-slot:activator>
+        <!-- <template v-slot:activator>
           <v-list-item-content>
             <v-list-item-title v-text="product_category.description"></v-list-item-title>
           </v-list-item-content>
-        </template>
+        </template> -->
       </v-list-group> 
       <!-- If category has no children, load a link to product page -->
       <nuxt-link
