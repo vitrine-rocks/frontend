@@ -1,0 +1,116 @@
+{
+    "product_categories": [
+        {
+            "id": "0a7fa760-cda7-42aa-b5f6-160095d3a8ae",
+            "description": "Áreas classificadas",
+            "slug": "areas-classificadas",
+            "product_categories": [
+                {
+                    "id": "55462f68-a97b-416f-aac2-1f440c53b01b",
+                    "description": "Acionamentos e bujões com filho",
+                    "slug": "acionamentos",
+                    "product_categories": [
+                        {
+                            "id": "55462f68-a97b-416f-aac2-1f440c53b01b",
+                            "description": "Acionamentos e bujões Filho",
+                            "slug": "acionamentos-filho",
+                            "product_categories": []
+                        }
+                    ]
+                },
+                {
+                    "id": "cdbcff07-25ef-4e6b-871e-0071c9ac64df",
+                    "description": "Botoeiras",
+                    "slug": "botoeiras",
+                    "product_categories": []
+                },
+                {
+                    "id": "712b89eb-a5f1-4249-bc27-b55faf6c2093",
+                    "description": "Caixas de passagem",
+                    "slug": "caixas-de-passagem",
+                    "product_categories": []
+                },
+                {
+                    "id": "670430da-2fba-4bd7-8a50-dc03a01786bd",
+                    "description": "Caixas de segurança",
+                    "slug": "caixas-de-seguranca",
+                    "product_categories": []
+                },
+                {
+                    "id": "17b1847d-6d46-4e34-aaee-8c40d6d2d312",
+                    "description": "Plugues e tomadas",
+                    "slug": "plugues-tomadas",
+                    "product_categories": []
+                },
+                {
+                    "id": "5bb5417d-226f-4572-bf9d-336841f8691f",
+                    "description": "Prensa Cabos",
+                    "slug": "prensa-cabos",
+                    "product_categories": []
+                }
+            ]
+        },
+        {
+            "id": "ef4541bc-112a-4170-9ce4-40a22d64174b",
+            "description": "Linha de transmissão",
+            "slug": "linha-de-transmissao",
+            "product_categories": [
+                {
+                    "id": "b3663438-3472-438b-bee7-5f09040c0dde",
+                    "description": "Amortecedores",
+                    "slug": "amortecedores",
+                    "product_categories": []
+                },
+                {
+                    "id": "3d542672-031b-4ecc-91f3-2919442a7eda",
+                    "description": "Armaduras heliformadas",
+                    "slug": "armaduras-heliformadas",
+                    "product_categories": []
+                },
+                {
+                    "id": "0e9194cc-617e-4741-b6ff-6c780e00e9e3",
+                    "description": "Cavalotes",
+                    "slug": "cavalotes",
+                    "product_categories": []
+                },
+                {
+                    "id": "09b3adf3-aefa-4346-9041-dcafdaad7fd2",
+                    "description": "Chapas de extensão",
+                    "slug": "chapas-de-extensao",
+                    "product_categories": []
+                },
+                {
+                    "id": "a612dc9b-c503-4b37-a28f-3a0da328a12a",
+                    "description": "Conchas",
+                    "slug": "conchas",
+                    "product_categories": []
+                }
+            ]
+        },
+        {
+            "id": "7f39559d-b442-4963-9a95-c3d2027ed23f",
+            "description": "Rede de distribuição",
+            "slug": "rede-de-distribuicao",
+            "product_categories": [
+                {
+                    "id": "6a2b94ae-1396-4de4-9507-b9803573144b",
+                    "description": "Anel de amarração",
+                    "slug": "anel-de-amarracao",
+                    "product_categories": []
+                },
+                {
+                    "id": "263296f8-44f0-4a3f-823e-f8d5f61bad9b",
+                    "description": "Armações",
+                    "slug": "armacoes",
+                    "product_categories": []
+                },
+                {
+                    "id": "ec7b87a5-1c4a-42b7-9402-bd34b3fd10c3",
+                    "description": "Braço anti-balanço",
+                    "slug": "braco-anti-balanco",
+                    "product_categories": []
+                }
+            ]
+        }
+    ]
+}
