@@ -14,10 +14,11 @@
         @click.stop.prevent
         v-if="product_category.product_categories.length > 0"
       >
-        <category
+        product_category.product_categories: {{ product_category.product_categories }}
+        <!-- <category
           :product_categories="product_category.product_categories"
           :index="index + 10"
-        />
+        /> -->
         <template v-slot:activator>
           <v-list-item-content>
             <v-list-item-title v-text="product_category.description"></v-list-item-title>
