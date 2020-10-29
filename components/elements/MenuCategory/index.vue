@@ -15,10 +15,15 @@
         v-if="product_category.product_categories.length > 0"
       >
         product_category.product_categories: {{ product_category.product_categories }}
+        product_category.product_categories.length: {{ product_category.product_categories.length }}
         <!-- <category
           :product_categories="product_category.product_categories"
           :index="index + 10"
         /> -->
+        <category
+          :product_categories="[{'id': 'cdbcff07-25ef-4e6b-871e-0071c9ac64df','description': 'Botoeiras','slug': 'botoeiras','product_categories': []},{'id': '712b89eb-a5f1-4249-bc27-b55faf6c2093','description': 'Caixas de passagem','slug': 'caixas-de-passagem','product_categories': []}]"
+          :index="index + 10"
+        />
         <template v-slot:activator>
           <v-list-item-content>
             <v-list-item-title v-text="product_category.description"></v-list-item-title>
