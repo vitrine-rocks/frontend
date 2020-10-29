@@ -1,8 +1,5 @@
 <template>
-  <v-list
-    v-if="product_categories.length"
-    class="category"
-  >
+  <v-list class="category">
     <div
       v-for="(product_category, index) in product_categories"
       :key="product_category.id"
@@ -16,6 +13,7 @@
       >
         product_category.product_categories: {{ product_category.product_categories }}
         product_category.product_categories.length: {{ product_category.product_categories.length }}
+        15:56
         <!-- <category
           :product_categories="product_category.product_categories"
           :index="index + 10"
