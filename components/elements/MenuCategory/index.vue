@@ -1,5 +1,6 @@
 <template>
   <v-list class="category">
+    product_categories: {{ product_categories }}
     <div
       v-for="(product_category, index) in product_categories"
       :key="product_category.id"
