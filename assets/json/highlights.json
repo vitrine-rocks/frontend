@@ -1,0 +1,25 @@
+{
+    "products": [
+        {
+            "id": "57a9b12c-2a78-47c2-b3b7-7e6f25c21734",
+            "title": "Acionamento",
+            "code": "F-1405-58",
+            "slug": "acionamento",
+            "showcase_image_url": "http://powermaster.com.br/site/wp-content/uploads/2015/07/pec-bujao-safeset-01.jpg"
+        },
+        {
+            "id": "57a9b12c-2a78-47c2-b3b7-7e6f25c21731",
+            "title": "Botoeira",
+            "code": "5126/261",
+            "slug": "botoeira",
+            "showcase_image_url": "https://www.ontek.com.br/wp-content/uploads/2020/03/botoeira-scaled.jpg"
+        },
+        {
+            "id": "57a9b12c-2a78-47c2-b3b7-7e6f25c21732",
+            "title": "Caixas de passagem e painéis a prova de explosão",
+            "code": "CCEx",
+            "slug": "caixas-de-passagem-e-paineis-a-prova-de-explosao",
+            "showcase_image_url": "https://www.solucoesindustriais.com.br/images/produtos/imagens_10252/p_caixa-de-passagem-4x4-9.jpg"
+        }
+    ]
+}
